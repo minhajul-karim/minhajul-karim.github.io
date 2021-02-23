@@ -10616,6 +10616,7 @@ form .row:first-child .floating-label-form-group {
 
 .title {
   font-size: 3.5rem;
+  text-decoration: underline;
 }
 
 .portfolio-item img {
