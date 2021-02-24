@@ -66,4 +66,40 @@
     });
   
   })(jQuery); // End of use strict
+
+  /* Form submission */
+
+  // Function to submit form
+  async function postForm(name, email, message) {
+    const response = await fetch('https://formspree.io/mwkqjgal', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message
+      })
+    })
+    return response.json()
+  }
+
+  const contactForm = document.getElementById('contact-form')
+  const name = document.getElementById('name')
+  const email = document.getElementById('email')
+  const message = document.getElementById('message')
+  const alertMsg = document.querySelector('.alert')
+  contactForm.addEventListener('submit', event => {
+    event.preventDefault()
+    // postForm(name.value, email.value, message.value)
+    name.value = ''
+    email.value = ''
+    message.value = ''
+    alertMsg.classList.add('show-alert')
+    setTimeout(()=> {
+      alertMsg.classList.remove('show-alert')
+    }, 5000)
+  })
   
