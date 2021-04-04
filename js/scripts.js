@@ -93,7 +93,6 @@
   const alertMsg = document.querySelector('.alert')
   contactForm.addEventListener('submit', event => {
     event.preventDefault()
-    // postForm(name.value, email.value, message.value)
     name.value = ''
     email.value = ''
     message.value = ''
@@ -102,4 +101,40 @@
       alertMsg.classList.remove('show-alert')
     }, 5000)
   })
+
+// Function that hides all thumbnails
+const thumbnails = document.querySelectorAll('.thumbnail')
+const hideAllThumbnails = () => {
+  thumbnails.forEach(thumbnail => {
+    thumbnail.style.display = 'none'
+  })
+}
+
+hideAllThumbnails()
+
+let category = 'front-end'
+const tabButtons = document.querySelectorAll('.tab-btn')
+// Function that displays project of a default category at first, then
+// responds to click events on category buttons
+tabButtons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const selectedCategory = e.target.dataset.tabCategory
+    category = selectedCategory
+    hideAllThumbnails()
+    showSelectedProjects(category)
+  })
+})
+
+// Show thumbnails of category only
+const showSelectedProjects = (category) => {
+  const selectedProjects = Array.from(thumbnails).filter(thumbnail => thumbnail.dataset.category === category)
+  console.log(selectedProjects)
+  selectedProjects.forEach(project => {
+    project.style.display = 'block'
+  })
+}
+
+showSelectedProjects(category)
+
+
   
