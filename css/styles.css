@@ -10649,7 +10649,7 @@ form .row:first-child .floating-label-form-group {
 .tab-btn {
   background: transparent;
   border: 0;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #d3d3d3;
 }
 
 .tab-btn + .tab-btn {

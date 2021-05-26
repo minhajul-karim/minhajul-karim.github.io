@@ -114,6 +114,10 @@ hideAllThumbnails()
 
 let category = 'front-end'
 const tabButtons = document.querySelectorAll('.tab-btn')
+const focusedTabButton = Array.from(tabButtons).find(btn => btn.dataset.tabCategory === category)
+tabButtons[0].style.border = '2px solid #000'
+tabButtons[0].style.borderRadius = '5px'
+console.log(focusedTabButton)
 // Function that displays project of a default category at first, then
 // responds to click events on category buttons
 tabButtons.forEach(btn => {
@@ -128,7 +132,6 @@ tabButtons.forEach(btn => {
 // Show thumbnails of category only
 const showSelectedProjects = (category) => {
   const selectedProjects = Array.from(thumbnails).filter(thumbnail => thumbnail.dataset.category === category)
-  console.log(selectedProjects)
   selectedProjects.forEach(project => {
     project.style.display = 'block'
   })
