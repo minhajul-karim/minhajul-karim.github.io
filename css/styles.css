@@ -10432,10 +10432,10 @@ a.text-dark:focus {
     font-size: 1.5em;
   }
 }
-.masthead {
+/* .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
-}
+} */
 .masthead .masthead-heading {
   font-size: 2.75rem;
   line-height: 2.75rem;
@@ -10448,10 +10448,10 @@ a.text-dark:focus {
 }
 
 @media (min-width: 992px) {
-  .masthead {
+  /* .masthead {
     padding-top: calc(6rem + 104px);
     padding-bottom: 6rem;
-  }
+  } */
   .masthead .masthead-heading {
     font-size: 4rem;
     line-height: 3.5rem;
@@ -10662,4 +10662,13 @@ form .row:first-child .floating-label-form-group {
   background-image: url(https://images.unsplash.com/photo-1454165205744-3b78555e5572?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
   background-size: cover;
   background-blend-mode: multiply;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* See my work button */
+.see-work-btn {
+  margin-top: 20px;
 }
