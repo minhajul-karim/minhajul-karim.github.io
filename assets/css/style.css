@@ -515,3 +515,21 @@ h6,
 .social a:hover {
     color: #000;
 }
+
+/* Icons on project hover */
+
+.icons-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+}
+
+.icons-row li {
+    list-style: none;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
