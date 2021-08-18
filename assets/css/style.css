@@ -94,7 +94,7 @@ h6,
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.8);
     visibility: hidden;
     opacity: 0;
     transition: 0.3s all ease-in-out;
@@ -393,13 +393,6 @@ h6,
 .custom-navbar {
     padding-top: 50px;
     width: 100%;
-}
-
-@media (max-width: 780px) {
-    .custom-navbar > .container {
-        /* padding-right: 0;
-    padding-left: 0; */
-    }
 }
 
 .custom-navbar .navbar-brand {
