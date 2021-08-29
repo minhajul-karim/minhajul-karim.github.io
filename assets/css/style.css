@@ -526,3 +526,13 @@ h6,
     width: 30px;
     height: 30px;
 }
+
+.height-200 {
+    height: 400px;
+}
+
+@media (max-width: 576px) {
+    .height-200 {
+        height: 200px;
+    }
+}
